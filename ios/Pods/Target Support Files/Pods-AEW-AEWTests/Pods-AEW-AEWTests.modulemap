@@ -1,0 +1,6 @@
+module Pods_AEW_AEWTests {
+  umbrella header "Pods-AEW-AEWTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
