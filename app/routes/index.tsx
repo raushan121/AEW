@@ -12,7 +12,7 @@ import OtpScreen from "../Screen/Authentication/Otp/OtpScreen";
 import HomeScreen from "../Screen/Home/HomeScreen";
 import PDFListScreen from "../Screen/PDFListScreen/PDFListScreen";
 import PDFReadScreen from "../Screen/PDFReadScreen/PDFReadScreen";
-import MyAccount from "../Screen/Account/MyAccount";
+import MyAccount from "../Screen/Account/MyAccount/MyAccount";
 import MyVideo from "../Screen/Video/MyVideo";
 import BottomTabStack from "./BottomStack";
 import HomeStackScreen from "./HomeStack";

@@ -23,6 +23,7 @@ import { fontResize } from "../../../Utils/fontResize";
 import { THEME } from "../../../Utils/theme";
 import { useVerifyOtpMutation } from "../../../redux/auth-api-slice";
 import Routename from "../../../routes/Routename";
+import { setLocalValue } from "../../../Utils/asyncStorage";
 
 const OtpScreen: FC = () => {
   const navigation = useNavigation();
@@ -96,6 +97,7 @@ const OtpScreen: FC = () => {
               Alert.alert("invalid otp")
             }
             else{
+              setLocalValue(STRINGS.STORAGE.IS_USER_LOGGED_IN, "true");
              navigation.navigate(Routename.HOME,{res});
             }
           }

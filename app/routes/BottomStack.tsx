@@ -12,7 +12,7 @@ import {
 import Routename from './Routename';
 import {fontResize} from '../Utils/fontResize';
 import {FONTS, THEME} from '../Utils/theme';
-import MyAccount from '../Screen/Account/MyAccount';
+import MyAccount from '../Screen/Account/MyAccount/MyAccount';
 import { ic_account_active, ic_account_inactive, ic_daily, ic_home_active, ic_home_inactive, ic_video_active, ic_video_inactive } from '../assets';
 import MyVideo from '../Screen/Video/MyVideo';
 import HomeStackScreen from './HomeStack';

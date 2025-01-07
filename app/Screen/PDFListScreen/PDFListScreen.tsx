@@ -1,4 +1,4 @@
-import { View, Text, FlatList, Image, TouchableOpacity } from 'react-native'
+import { View, Text, FlatList, Image, TouchableOpacity, Pressable, Alert } from 'react-native'
 import React from 'react'
 import styles from './style'
 import globalStyles from '../../Utils/globalStyle'
@@ -11,10 +11,15 @@ import Routename from '../../routes/Routename'
 
 const PDFListScreen = ({ navigation }: any) => {
 
+
+
   const dummyData = [
     {}, {}, {}, {}, {}, {}, {}, {},
   ]
 
+  const onPressBack = () => {
+    navigation.goBack();
+  };
   const onPressRead = (item: any) => {
     navigation.navigate(Routename.PDF_READ_SCREEN)
     console.log("item>>>>", item)
@@ -22,7 +27,7 @@ const PDFListScreen = ({ navigation }: any) => {
 
   const renderItem = ({ item }: any) => {
     return (
-      <View style={styles.listMainContainer}>
+      <Pressable onPress={() => onPressRead(item)} style={styles.listMainContainer}>
         <View style={globalStyles.row2}>
           <View style={styles.readImageContainer}>
           <Image style={styles.subjectIcon} source={ic_book_open} />
@@ -34,18 +39,18 @@ const PDFListScreen = ({ navigation }: any) => {
           <TouchableOpacity onPress={() => onPressRead(item)} activeOpacity={0.8} style={styles.readContainerStyle}>
             <Text style={styles.btnText}>Read</Text>
           </TouchableOpacity>
-          <TouchableOpacity activeOpacity={0.8}>
+          <TouchableOpacity onPress={()=>Alert.alert("suscribe to download")} style={{zIndex:1}} activeOpacity={0.8}>
             <Image style={styles.downloadIcon} source={ic_pdf_download} />
           </TouchableOpacity>
         </View>
-      </View>
+      </Pressable>
     )
   }
 
   return (
     <SafeAreaView style={[globalStyles.container, NotchArea.AndroidSafeArea,]}>
       <View style={[globalStyles.row2,{marginBottom:hp("3%")}]}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={onPressBack}>
           <Image source={ic_back}/>
         </TouchableOpacity>
       <Text style={styles.header}>PDFListScreen</Text>

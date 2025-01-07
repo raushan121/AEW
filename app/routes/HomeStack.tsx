@@ -9,6 +9,9 @@ import SplashScreen from "../Screen/SplashScreen/SplashScreen";
 import SignUpScreen from "../Screen/Authentication/SignUp/SignUpScreen";
 import OtpScreen from "../Screen/Authentication/Otp/OtpScreen";
 import PDFReadScreen from "../Screen/PDFReadScreen/PDFReadScreen";
+import AuthStackScreen from "./AuthStack";
+import { getLocalValue } from "../Utils/asyncStorage";
+import STRINGS from "../Constants/string";
 
 
 
@@ -16,14 +19,10 @@ import PDFReadScreen from "../Screen/PDFReadScreen/PDFReadScreen";
 const HomeStack = createNativeStackNavigator();
 
 const HomeStackScreen = () => {
+    const isUserLogin = String(getLocalValue(STRINGS.STORAGE.IS_USER_LOGGED_IN));
     return (
-        <HomeStack.Navigator screenOptions={{ headerShown: false }}>
-            <HomeStack.Screen name={Routename.LOGIN_SCREEN} component={LoginScreen} />
-            <HomeStack.Screen
-                name={Routename.SIGNUP_SCREEN}
-                component={SignUpScreen}
-            />
-            <HomeStack.Screen name={Routename.OTP_SCREEN} component={OtpScreen} />
+        <HomeStack.Navigator initialRouteName={isUserLogin=="true"?Routename.HOME:Routename.AUTH_STACK} screenOptions={{ headerShown: false }}>
+            <HomeStack.Screen name={Routename.AUTH_STACK} component={AuthStackScreen} />
             <HomeStack.Screen
                 name={Routename.HOME}
                 component={HomeScreen}

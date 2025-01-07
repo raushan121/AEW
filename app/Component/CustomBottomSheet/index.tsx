@@ -14,7 +14,7 @@ import {
 import RowText from "../RowText";
 import { THEME } from "../../Utils/theme";
 import { fontResize } from "../../Utils/fontResize";
-import { ic_cross } from "../../assets";
+import { ic_back } from "../../assets";
 
 interface sheetProps {
   sheetReference: any;
@@ -73,7 +73,7 @@ const Custom_Sheet: FC<sheetProps> = ({
                 leftIcon={leftIcon}
                 leftTextStyle={styles.boldText}
                 isRightIcon
-                rightIcon={ic_cross}
+                rightIcon={ic_back}
                 iconStyle={{ tintColor: THEME.PRIMARY }}
                 onPressIcon={onPressIcon}
               />

@@ -27,10 +27,7 @@ ic_splash_logo
 } from "../../assets";
 import Routename from "../../routes/Routename";
 import { MMKV } from "react-native-mmkv";
-import STRINGS from "../../Constants/string";
-import { useDispatch } from "react-redux";
 import globalStyles from "../../Utils/globalStyle";
-import { getLocalValue } from "../../Utils/asyncStorage";
 import { SafeAreaView } from 'react-native-safe-area-context'
 
 export const storage = new MMKV();
@@ -38,11 +35,6 @@ export const storage = new MMKV();
 const SplashScreen = ({ navigation }:any) => {
   const f_logo = useRef(new Animated.Value(0)).current; // Initial value for opacity: 0
   const s_logo = useRef(new Animated.Value(1)).current; // Initial value for opacity: 1
-
-  const getToken = String(getLocalValue(STRINGS.STORAGE.TOKEN));
-  const isUserLogin = String(getLocalValue(STRINGS.STORAGE.IS_USER_LOGGED_IN));
-  const dispatch = useDispatch();
-
 
   useLayoutEffect(() => {
     Animated.timing(f_logo, {
@@ -60,9 +52,8 @@ const SplashScreen = ({ navigation }:any) => {
       delay: 500,
     }).start(
       () =>
-        isUserLogin == "true"
-          ? navigation.navigate(Routename.BOTTOM_TABBAR)
-          : navigation.navigate(Routename.BOTTOM_TABBAR)
+   
+          navigation.navigate(Routename.BOTTOM_TABBAR)
       // : navigation.navigate(Routename.ONBOARDING_SCREEN)
     );
   }, [f_logo, s_logo]);

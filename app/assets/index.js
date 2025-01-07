@@ -14,6 +14,8 @@ import ic_video_active from "./images/ic_video_active.png";
 import ic_video_inactive from "./images/ic_video_inactive.png";
 import ic_account_active from "./images/ic_myAccount_active.png";
 import ic_account_inactive from "./images/ic_myAccount_inactive.png";
+import ic_cross from "./images/ic_cross.png";
+import ic_right_aerrow from "./images/ic_right_aerrow.png";
 
 export {
     // bottomtabbar icon
@@ -33,6 +35,8 @@ export {
     ic_daily,
     ic_monthely,
     ic_weekly,
-    ic_book_open
+    ic_book_open,
+    ic_cross,
+    ic_right_aerrow
 
 }

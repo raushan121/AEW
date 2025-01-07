@@ -99,7 +99,7 @@ const PDFReadScreen = () => {
       />
 
 <View style={[globalStyles.row2,{marginBottom:hp("3%")}]}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={onPressBack}>
           <Image source={ic_back}/>
         </TouchableOpacity>
       <Text style={styles.header}>PDFReadScreen</Text>

@@ -31,44 +31,17 @@ export const styles = StyleSheet.create({
     alignItems: "center",
   },
   headerText: {
-    marginVertical: hp("2%"),
+    marginVertical:hp("2%"),
     fontSize: fontResize(16),
     fontWeight: "700",
     fontFamily: FONTS.SEMI_BOLD,
   },
   profileIcon: {
-    marginTop: hp("1%"),
+    marginTop: hp("3%"),
     marginBottom: hp("2%"),
-    height: wp("20%"),
-    width: wp("20%"),
+    height: wp("30%"),
+    width: wp("30%"),
     borderRadius: wp("20%"),
   },
-  textInputMargin: {
-    marginBottom: hp("1.7%"),
-  },
-  bottomContainer: {
-    marginVertical: hp("2.5%"),
-  },
-  errormsg: {
-    marginTop: -wp("4.5%"),
-    marginBottom: hp("1%"),
-  },
-  titleContainer: {
-    flexDirection: "row",
-    overflow: "hidden",
-    marginTop: hp("1%"),
-  },
-  normalText: {
-    fontSize: fontResize(12),
-    fontWeight: "600",
-    fontFamily: FONTS.SEMI_BOLD,
-    color: THEME.TEXT_COLOR,
-    marginBottom: -hp("1%"),
-  },
-  headerIcon: {
-    height: wp("5%"),
-    width: wp("5%"),
-    resizeMode: "contain",
-  },
-});
-export default styles;
+})
+export default styles
