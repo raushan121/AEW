@@ -16,6 +16,8 @@ import MyAccount from "../Screen/Account/MyAccount/MyAccount";
 import MyVideo from "../Screen/Video/MyVideo";
 import BottomTabStack from "./BottomStack";
 import HomeStackScreen from "./HomeStack";
+import EditProfile from "../Screen/Account/EditProfile";
+import SelectedCategoriesHome from "../Screen/SelectedCategoriesHome/SelectedCategoriesHome";
 
 
 
@@ -32,11 +34,11 @@ const Routes = () => {
           name={Routename.SPLASH_SCREEN}
           component={SplashScreen}
         />
-         <Stack.Screen
+        <Stack.Screen
           name={Routename.HOME_STACK}
           component={HomeStackScreen}
         />
-           <Stack.Screen
+        <Stack.Screen
           name={Routename.BOTTOM_TABBAR}
           component={BottomTabStack}
         />
@@ -56,22 +58,31 @@ const Routes = () => {
           name={Routename.HOME}
           component={HomeScreen}
         />
-         <Stack.Screen
+        <Stack.Screen
+          name={Routename.SELECTED_CAT_HOME}
+          component={SelectedCategoriesHome}
+        />
+        <Stack.Screen
           name={Routename.PDF_LIST_SCREEN}
           component={PDFListScreen}
         />
-         <Stack.Screen
+        <Stack.Screen
           name={Routename.PDF_READ_SCREEN}
           component={PDFReadScreen}
         />
-           <Stack.Screen
+        <Stack.Screen
           name={Routename.ACCOUNT}
           component={MyAccount}
         />
-           <Stack.Screen
+        <Stack.Screen
           name={Routename.VIDEO_SCREEN}
           component={MyVideo}
         />
+        <Stack.Screen
+          name={Routename.EDIT_PROFILE}
+          component={EditProfile}
+        />
+
       </Stack.Navigator>
     </NavigationContainer>
   );

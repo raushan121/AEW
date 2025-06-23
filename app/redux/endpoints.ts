@@ -18,6 +18,6 @@ export const METHOD = {
 // REDUCER-PATH
 export const REDUCERS = {
   AUTH: "auth",
-  FLIGHT: "flight",
+  HOME: "home",
   AUTH_USER: "auth_user",
 };

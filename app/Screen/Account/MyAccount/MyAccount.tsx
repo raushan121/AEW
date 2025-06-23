@@ -29,7 +29,7 @@ import STRINGS from "../../../Constants/string";
 import Routename from "../../../routes/Routename";
 import Toast from "react-native-toast-message";
 import { useNavigation } from "@react-navigation/native";
-import { ic_account_active, ic_back, ic_comp_logo, ic_daily, ic_home_inactive, ic_right_aerrow } from "../../../assets";
+import { ic_account_active, ic_back, ic_comp_logo, ic_daily, ic_edit, ic_home_inactive, ic_logout, ic_notification, ic_profile, ic_right_aerrow, ic_subscription } from "../../../assets";
 import Custom_Sheet from "../../../Component/CustomBottomSheet";
 
 const MyAccount = () => {
@@ -107,10 +107,8 @@ const MyAccount = () => {
       {/* <ImageBackground source={backgrounImage} style={styles.container}> */}
         <Header
           isLeftIcon
-          leftIcon={ic_daily}
-          onPressLeftIcon={onPressHeader}
           isRightIcon
-          rightIcon={ic_daily}
+          rightIcon={ic_notification}
           headerText={"My Account"}
           isheaderText
         />
@@ -139,13 +137,13 @@ const MyAccount = () => {
               onPress={onPressEditProfile}
               // onPress={(type) => selectImage(type)}
             >
-              <Image source={ic_back} style={styles.editProfileIcon} />
+              <Image source={ic_edit} style={styles.editProfileIcon} />
             </Pressable>
           </TouchableOpacity>
           <Text style={styles.profileNameText}>Guest</Text>
           <View style={{ marginVertical: hp("3%") }}>
             <TextWithImage
-              leftIcon={ic_daily}
+              leftIcon={ic_subscription}
               headertext={"manage my Subscription"}
               righticon={ic_right_aerrow}
               containerStyle={styles.boxContainer}
@@ -153,16 +151,16 @@ const MyAccount = () => {
               // onPress={() => navigation.navigate(Routename.SIGNUP_SCREEN)}
             />
             <TextWithImage
-              leftIcon={ic_back}
+              leftIcon={ic_profile}
               headertext={"My Profile"}
               righticon={ic_right_aerrow}
               containerStyle={styles.boxContainer}
-              // onPress={() => navigation.navigate(Routename.EDIT_PROFILE)}
+              onPress={() => navigation.navigate(Routename.EDIT_PROFILE)}
             />
            
             <TextWithImage
               isLogout
-              leftIcon={ic_daily}
+              leftIcon={ic_logout}
               headertext={"Logout"}
               righticon={ic_daily}
               containerStyle={styles.boxContainer}

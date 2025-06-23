@@ -11,7 +11,7 @@ import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
 } from "react-native-responsive-screen";
-import { backgrounImage, ic_arrowBack, ic_profile } from "../../../assets";
+import { backgrounImage, ic_arrowBack, ic_back, ic_profile } from "../../../assets";
 import GeneralStatusBarColor from "../../../Component/styles/GeneralStatusBarColor";
 import styles from "./style";
 import NotchArea from "../../../Utils/SafeAreaView";
@@ -21,8 +21,7 @@ import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view
 import CountryPickerTextInput from "../../../Component/CountryPicker";
 import STRINGS from "../../../Constants/string";
 import TextField from "../../../Component/TextField";
-import CustomRadioButton from "../../../Component/CustomRadioButton";
-import Button from "../../../Component/Button";
+import Button from "../../../Component/CustomButton";
 
 const EditProfile = ({ navigation }) => {
   const [email, setEmail] = useState("");
@@ -69,7 +68,8 @@ const EditProfile = ({ navigation }) => {
       <ImageBackground source={backgrounImage} style={styles.container}>
         <Header
           isLeftIcon
-          leftIcon={ic_arrowBack}
+          leftIcon={ic_back}
+          leftIconStyle={{ tintColor: "red" }}
           onPressLeftIcon={() => navigation.goBack()}
           headerText={"Edit Profile"}
           headerTextStyle={{ paddingLeft: wp("20%") }}

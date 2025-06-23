@@ -1,12 +1,15 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { authSlice } from "./auth-api-slice";
 import authData from "./auth-data-slice";
-
+import homeData from "./home-data-slice";
+import { homeSlice } from "./home-api-slice";
 
 const reducer = combineReducers({
   [authSlice.reducerPath]: authSlice.reducer,
+    [homeSlice.reducerPath]: homeSlice.reducer,
 
   authData: authData,
+  homeData:homeData
 
 });
 
@@ -18,6 +21,7 @@ export const store = configureStore({
       immutableCheck: false,
     }).concat(
       authSlice.middleware,
+      homeSlice.middleware
     );
   },
 });

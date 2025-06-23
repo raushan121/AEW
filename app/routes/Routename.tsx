@@ -19,7 +19,9 @@ const Routename: any = {
   OTP_WITH_PASSWORD: "OtpWithPassword",
   PDF_LIST_SCREEN:'PDFListScreen',
   PDF_READ_SCREEN:'PDFReadScreen',
-  VIDEO_SCREEN:"Video_Screen"
+  VIDEO_SCREEN:"Video_Screen",
+  EDIT_PROFILE: "EditProfile",
+  SELECTED_CAT_HOME:'SelectedCatHome'
 
  
 

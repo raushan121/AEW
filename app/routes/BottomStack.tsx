@@ -13,7 +13,7 @@ import Routename from './Routename';
 import {fontResize} from '../Utils/fontResize';
 import {FONTS, THEME} from '../Utils/theme';
 import MyAccount from '../Screen/Account/MyAccount/MyAccount';
-import { ic_account_active, ic_account_inactive, ic_daily, ic_home_active, ic_home_inactive, ic_video_active, ic_video_inactive } from '../assets';
+import { ic_account_active, ic_account_inactive, ic_home_active, ic_home_inactive, ic_video_active, ic_video_inactive } from '../assets';
 import MyVideo from '../Screen/Video/MyVideo';
 import HomeStackScreen from './HomeStack';
 
@@ -120,23 +120,24 @@ const styles = StyleSheet.create({
   iconContainer: {
     alignItems: 'center',
     width: wp('45%'),
-    marginBottom: hp('0.3%'),
+    justifyContent:'center',
+    paddingTop:hp('2.5%'),
   },
   iconStyle: {
-    height: wp('8%'),
-    width: wp('8%'),
+    height: wp('6%'),
+    width: wp('6%'),
     resizeMode: 'contain',
   },
   tabText: {
-    fontSize: fontResize(12),
+    fontSize: fontResize(11),
     fontWeight: '600',
     color: THEME.TEXT_COLOR,
     fontFamily: FONTS.LIGHT_ITALIC,
-    marginBottom: hp('1%'),
+    marginTop: hp('0.5%'),
   },
   iconStyleActive: {
-    height: wp('8%'),
-    width: wp('8%'),
+    height: wp('6%'),
+    width: wp('6%'),
     resizeMode: 'contain',
   },
 });

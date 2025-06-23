@@ -33,6 +33,11 @@ const globalStyles=StyleSheet.create({
     row2:{
         flexDirection:'row',
         alignItems:'center' 
+    },
+    icon:{
+        height:wp("7%"),
+        width:wp("7%"),
+        resizeMode:'contain'
     }
 })
 

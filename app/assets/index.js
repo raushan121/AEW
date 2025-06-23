@@ -16,6 +16,13 @@ import ic_account_active from "./images/ic_myAccount_active.png";
 import ic_account_inactive from "./images/ic_myAccount_inactive.png";
 import ic_cross from "./images/ic_cross.png";
 import ic_right_aerrow from "./images/ic_right_aerrow.png";
+import ic_notification from "./images/ic_notification.png";
+import ic_edit from "./images/ic_edit.png";
+import ic_subscription from "./images/ic_subscription.png";
+import ic_logout from "./images/ic_logout.png";
+import ic_profile from "./images/ic_profile.png";
+import ic_language_change from "./images/ic_language_change.png";
+
 
 export {
     // bottomtabbar icon
@@ -37,6 +44,12 @@ export {
     ic_weekly,
     ic_book_open,
     ic_cross,
-    ic_right_aerrow
+    ic_right_aerrow,
+    ic_notification,
+    ic_edit,
+    ic_subscription,
+    ic_logout,
+    ic_profile,
+    ic_language_change
 
 }

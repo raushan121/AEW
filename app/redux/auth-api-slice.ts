@@ -11,9 +11,6 @@ export const authSlice = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: END_POINTS.BASE_URL,
     prepareHeaders: async (headers, { endpoint }) => {
-      // if (token) {
-      //   headers.set("x-api-key", `Bearer ${JSON.parse(token)}`);
-      // }
       headers.set("Content-Type", "application/json");
       return headers;
     },

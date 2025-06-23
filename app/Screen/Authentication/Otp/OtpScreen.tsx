@@ -38,6 +38,7 @@ const OtpScreen: FC = () => {
 
   // Access route params with memoization
   const resultData = route?.params?.res;
+  console.log("routedatais>>>>",resultData)
 
   useEffect(() => {
     console.log("resultdataaa890", resultData);
@@ -97,6 +98,7 @@ const OtpScreen: FC = () => {
               Alert.alert("invalid otp")
             }
             else{
+              setLocalValue(STRINGS.STORAGE.USER_DATA, JSON.stringify(res));
               setLocalValue(STRINGS.STORAGE.IS_USER_LOGGED_IN, "true");
              navigation.navigate(Routename.HOME,{res});
             }
@@ -128,7 +130,10 @@ const OtpScreen: FC = () => {
           <Text style={styles.codeToVerifyText}>
             {STRINGS.ENTER_CODE_TO_VERIFY}
           </Text>
-          <Text>{route?.params?.email}</Text>
+          <Text>Email:- {route?.params?.email||resultData?.Email}</Text>
+          {resultData?.Mobile && (
+              <Text>Phone:- {route?.params?.email||resultData?.Mobile}</Text>
+          )}
         </View>
 
         <KeyboardAvoidingView
